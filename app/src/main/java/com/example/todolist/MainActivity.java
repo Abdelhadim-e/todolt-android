@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             int idx = cursor.getColumnIndex(TaskContract.TaskEntry.COL_TASK_TITLE);
             Log.d(TAG, "Task: " + cursor.getString(idx));
         }
+        this.updateUI();
         cursor.close();
         db.close();
     }
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             taskList.add(cursor.getString(idx));
         }
 
+        // mdapter = null else create
         if (mAdapter == null) {
             mAdapter = new ArrayAdapter<>(this,
                     R.layout.item_todo,
