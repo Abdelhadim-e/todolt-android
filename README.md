@@ -1,2 +1,2 @@
 # todolt-android
-- Mini project - to-do list - Android/java
+- Mini project Application - to-do list - Android/java
