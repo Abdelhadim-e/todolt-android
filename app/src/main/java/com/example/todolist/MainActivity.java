@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.example.todolist.db.TaskContract;
 import com.example.todolist.db.TaskDbHelper;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -102,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
                                 Date date = new Date();
-                                task = "[" + task + "]" + date;
+                                SimpleDateFormat formater = new SimpleDateFormat(" dd/MM/yyyy  hh:mm:ss");
+                                task = "[" + task + "]" + formater.format(date);
                                 SQLiteDatabase db = mHelper.getWritableDatabase();
                                 ContentValues values = new ContentValues();
                                 values.put(TaskContract.TaskEntry.COL_TASK_TITLE, task);
