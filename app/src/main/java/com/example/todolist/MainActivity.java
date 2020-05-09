@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 final EditText taskEditText = new EditText(this);
                 AlertDialog dialog = new AlertDialog.Builder(this)
                         .setTitle("Add a new task")
-                        .setMessage("What do you want to do next?")
+                        .setMessage("What do u want to do next man? :-) ")
                         .setView(taskEditText)
                         .setPositiveButton("Add", new DialogInterface.OnClickListener() {
                             @Override
